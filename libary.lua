@@ -24,8 +24,8 @@ local Colors = {
 -- Animation Settings
 local AnimationSettings = {
     Time = 0.3,
-    EaseStyle = Enum.EaseStyle.Quad,
-    EaseDirection = Enum.EaseDirection.Out
+    EasingStyle = Enum.EasingStyle.Quad,
+    EasingDirection = Enum.EasingDirection.Out
 }
 
 -- Notification System
@@ -93,8 +93,8 @@ function Library:CreateNotification(title, message, type)
     -- Animate in
     local tweenInfo = TweenInfo.new(
         AnimationSettings.Time,
-        AnimationSettings.EaseStyle,
-        AnimationSettings.EaseDirection
+        AnimationSettings.EasingStyle,
+        AnimationSettings.EasingDirection
     )
     
     local positionTween = TweenService:Create(
@@ -158,8 +158,8 @@ function Library:CreateWindow(title)
     -- Animate window opening
     local tweenInfo = TweenInfo.new(
         AnimationSettings.Time,
-        AnimationSettings.EaseStyle,
-        AnimationSettings.EaseDirection
+        AnimationSettings.EasingStyle,
+        AnimationSettings.EasingDirection
     )
 
     local sizeTween = TweenService:Create(
